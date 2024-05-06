@@ -20,7 +20,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    docker.run("${env.DOCKER_IMAGE}:latest")
+                    docker.image("${env.DOCKER_IMAGE}:latest").run("")
                 }
             }
         }
